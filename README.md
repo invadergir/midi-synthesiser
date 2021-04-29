@@ -1,6 +1,6 @@
 # Midi Synthesiser Starter Code
 
-This repo is the result of my research into the Juce Framework and is a good starting point to create a synthesiser standalone and/or plugin.  It contains some good reusable generic classes that can be used to build any kind of midi synthesiser plugin/app with effects.
+This repo is the result of my research into the Juce Framework and is a good starting point to create a synthesiser app and/or plugin.  It contains some good reusable generic classes that can be used to build any kind of midi synthesiser  with effects.
 
 This code depends on the Juce Library to run.  Please see the [LICENSE.md](LICENSE.md) and [LICENSE-NOTES.md](LICENSE-NOTES.md) files for details.
 
@@ -12,7 +12,9 @@ This code depends on the Juce Library to run.  Please see the [LICENSE.md](LICEN
 
 * _**So... before loading up on more than one effect of the same type, MAKE SURE TO TURN DOWN YOUR VOLUME!**_
 
-**I'll say it again - TURN DOWN YOUR VOLUME!**  
+**The filter resonance can also be especially load, even at low settings.**
+
+**So in case you missed it, I'll say it again:  TURN DOWN YOUR VOLUME!**  
 
 **You've been warned.  I'm not liable for any damage to your speakers, ears, sanity, etc.**
 
@@ -23,12 +25,13 @@ This code depends on the Juce Library to run.  Please see the [LICENSE.md](LICEN
 Cool stuff in here:
 
 1. A wavetable synthesiser implementation with waveform sweeping from sine to triangle to square, and any combination between each.  (You can sweep continuously between sine and triangle and between triangle and square.)
-2. An effects section featuring six effect slots with variable gain that can be put in any order you like.  (You might have heard about this above, in the Warning section... If not, please read that now....)  The effects use juce::dsp modules.  The available effects are:
+2. An effects section featuring six effect slots with variable gain that can be put in any order you like.  (You might have heard about this above, in the Warning section...)  The effects use juce::dsp modules.  The available effects are:
     * Distortion - mild wave distortion taken from an overdriven filter circuit
     * Delay - ~400ms delay.  Feedback (level of each repeat) is controlled by the effect level control.
     * Chorus - Wet / dry mix is controlled by the effect level (1.0 = full wet)
     * Reverb - Wet / dry mix is controlled by the effect level control.
-3. A low-pass filter with configurable cutoff frequency and resonance.  (Pretty standard, however please note that the filter goes into pretty steep resonance pretty early on.  The default resonance is 0.)
+3. A low-pass filter with configurable cutoff frequency and resonance.  (Pretty standard stuff, but please note that the filter goes into steep resonance pretty early on.  The default resonance is 0.)
+    * (Have I mentioned that it's a good idea to turn down the volume before testing this synth??)
 
 ## Software Features
 
