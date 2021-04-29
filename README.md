@@ -2,7 +2,7 @@
 
 This repo is the result of my research into the Juce Framework and is a good starting point to create a synthesiser app and/or plugin.  It contains some good reusable generic classes that can be used to build any kind of midi synthesiser  with effects.
 
-This code depends on the Juce Library to run.  Please see the [LICENSE.md](LICENSE.md) and [LICENSE-NOTES.md](LICENSE-NOTES.md) files for details.
+This code depends on the Juce Library to run.  Please see the [LICENSE.md](LICENSE.md) and [LICENSE-NOTE.md](LICENSE-NOTE.md) files for details.
 
 --------------------------------------------------
 
