@@ -12,11 +12,11 @@ This code depends on the Juce Library to run.  Please see the [LICENSE.md](LICEN
 
 * _**So... before loading up on more than one effect of the same type, MAKE SURE TO TURN DOWN YOUR VOLUME!**_
 
-**The filter resonance can also be especially load, even at low settings.**
+**The filter resonance can also be especially loud, even at low settings.**
 
 **So in case you missed it, I'll say it again:  TURN DOWN YOUR VOLUME!**  
 
-**You've been warned.  I'm not liable for any damage to your speakers, ears, sanity, etc.**
+_**You've been warned.**_  **I'm not liable for any damage to your speakers, ears, sanity, etc.**
 
 --------------------------------------------------
 
