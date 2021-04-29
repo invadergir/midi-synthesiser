@@ -8,7 +8,7 @@ This code depends on the Juce Library to run.  Please see the [LICENSE.md](LICEN
 
 # A Word Of Warning Before You Start:  Turn Down Your Volume!
 
-**This synthesiser lets you put as many as 6 effects on the signal, in any order you like, in any number you like.  This means you could place 6 distortions in-line or 6 reverbs if you really wanted to....  However - you probably DO NOT want to, as feedback and general chaos will be the result.  It's fun to play with, but it gets out of hand quickly - especially if your effect gain dials aren't set low enough.**
+**This synthesiser lets you put as many as 6 effects on the signal, in any order you like, in any number you like.  This means you could place 6 distortions in-line or 6 reverbs if you really wanted to....  However - you probably DO NOT want to, as feedback, frequency spikes and general chaos will be the result.  It's fun to play with, but it gets out of hand quickly - especially if your effect gain dials aren't set low enough.**
 
 * _**So... before loading up on more than one effect of the same type, MAKE SURE TO TURN DOWN YOUR VOLUME!**_
 
