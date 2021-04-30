@@ -44,7 +44,7 @@ Profiler::~Profiler() {
 const juce::String Profiler::toString() const {
     using namespace juce;
     return String("Perf Stats:  minNanos=") + String(minNanos) + String(", maxNanos=") + String(maxNanos) +
-        String(", nanosAvg=") + String(static_cast<unsigned long>(nanosAvg)) + String(", nanosCount=") + String(nanosCount);
+        String(", nanosAvg=") + String(static_cast<unsigned long>(nanosAvg)) + String(", totalSamples=") + String(totalSamples);
 }
 
 /**
@@ -68,11 +68,11 @@ void Profiler::stop() {
         if (minNanos < 0 || nanos < minNanos) minNanos = nanos;
         if (nanos > maxNanos) maxNanos = nanos;
         if ( nanosAvg < 0.0 ) nanosAvg = (double)nanos;
-        else nanosAvg = ((nanosAvg * nanosCount) + nanos) / (nanosCount + 1);
-        nanosCount += 1;
+        else nanosAvg = ((nanosAvg * totalSamples) + nanos) / (totalSamples + 1);
+        totalSamples += 1;
 
-        if (nanosCount % outputModulo == 0) {
-          pMTL->debug(this->toString());
+        if (totalSamples % outputModulo == 0) {
+            pMTL->debug(this->toString());
         }
     }
     else {

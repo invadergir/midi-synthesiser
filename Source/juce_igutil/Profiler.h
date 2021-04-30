@@ -47,6 +47,8 @@ public:
     // get elapsed time, store stats, and maybe output to the log based on the modulo
     void stop();
 
+    inline unsigned long long getTotalSamples() const { return totalSamples; }
+
 private: 
 
     Stopwatch sw;
@@ -56,7 +58,7 @@ private:
     __int64 minNanos = -1L;
     __int64 maxNanos = 0L;
     double nanosAvg = -1.0;
-    unsigned long long nanosCount = 0LL;
+    unsigned long long totalSamples = 0LL;
 
     std::shared_ptr<MTLogger> pMTL;
 

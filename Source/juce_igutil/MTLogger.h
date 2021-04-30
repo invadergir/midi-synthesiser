@@ -7,7 +7,6 @@
 #pragma once
 
 #include <JuceHeader.h>
-//#include <boost/lockfree/spsc_queue.hpp>
 #include <shared_mutex>
 
 namespace juce_igutil {
@@ -43,7 +42,6 @@ private:
     void logLoop(LogLoopArgs args);
     
     // Message queue and protection
-    //boost::lockfree::spsc_queue<juce::String> queue; // the mutex version was actually more performant in my tests...
     std::queue<juce::String, std::deque<juce::String>> queue;
     std::shared_mutex queueMutex;
 };

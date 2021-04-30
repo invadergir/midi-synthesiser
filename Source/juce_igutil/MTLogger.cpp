@@ -3,8 +3,6 @@
 using namespace juce;
 using namespace juce_igutil;
 
-//#define MAX_QUEUE_SIZE (50)
-
 // Poison Pill definition.
 const juce::String MTLogger::poisonPill("__MTLogger_PoisonPill__");
 
@@ -83,7 +81,7 @@ void MTLogger::logLoop(LogLoopArgs args)
         if (args.queueMutex.try_lock()) {
             bool locked = true;
             while ( !done && !args.queue.empty() ) {
-                
+            
                 // relock if needed
                 if ( !locked ) {
                     args.queueMutex.lock();
@@ -96,7 +94,8 @@ void MTLogger::logLoop(LogLoopArgs args)
                 args.queueMutex.unlock();
                 locked = false;
 
-                // Do the log or prepare to exit
+                // Do the log or prepare to exit.  This is done outside of the locking 
+                // to ensure that we don't hold the lock while doing this I/O.
                 if (message == MTLogger::poisonPill) {
                     args.pLogger->logMessage(String("LOGGER: detected poison pill. Exiting..."));
                     done = true;

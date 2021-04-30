@@ -1,4 +1,6 @@
-LOGDIR="$HOME/AppData/Roaming/midi-synthesiser/"
+NAME="midi-synthesiser"
 
-LOGF="$LOGDIR/midi-synthesiser.txt"
-SETTINGSF="$LOGDIR/midi-synthesiser.settings"
+LOGDIR="$HOME/AppData/Roaming/$NAME"
+
+LOGF="$LOGDIR/$NAME.txt"
+SETTINGSF="$LOGDIR/$NAME.settings"
